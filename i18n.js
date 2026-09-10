@@ -730,3 +730,14 @@ document.querySelectorAll('[data-copy]').forEach((el) => {
     }
   });
 });
+
+
+function reloadCSS(selector) {
+  document.querySelectorAll(selector).forEach((link) => {
+    const url = new URL(link.href);
+    url.searchParams.set('_cache', Date.now()); // unique value forces a fresh fetch
+    link.href = url.toString();
+  });
+}
+
+reloadCSS('link[rel="stylesheet"]');
