@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Starlink Cat </title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" sizes="16x16" type="image/png" href="assets/img/2favicon.png">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <path d="M13 2c-1.2 0-2.1.5-2.6 1.2L9 5.6c-.3.5-.2 1 .2 1.3l1.5 1.2c.3.3.3.8.1 1.2L10 11c-.3.5-.9.7-1.4.5L6.4 10.6c-.6-.2-1.2.1-1.4.7l-.6 2c-.2.6.2 1.2.8 1.3l2.3.4c.5.1.9.5.9 1.1v1.6c0 .6-.3 1-.9 1.1l-2.3.4c-.6.1-1 .7-.8 1.3l.6 2c.2.6.8.9 1.4.7l2.2-.9c.5-.2 1.1 0 1.4.5l1 1.7c.2.4.2.9-.1 1.2L10 26" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="17.5" cy="11" r="1.4" fill="#ffffff"/>
+        <circle cx="16" cy="15.5" r="1.1" fill="#9d9d9d"/>
+        <path d="M13 2c4 0 8 2.4 9.5 6.2" stroke="#9d9d9d" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2.5 2.5"/>
+      </svg>
+      <span data-i18n="brand.name">Starlink Cat</span>
+    </a>
+    <div class="nav-links">
+      <a href="#vision" data-i18n="nav.vision">Vision</a>
+      <a href="#vault" data-i18n="nav.vault">Vault</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="#vault" data-i18n="nav.records" style="display: none;">On-chain records</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switch">
+        <select id="langSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="es">Español</option>
+          <option value="ko">한국어</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <a class="btn ghost sm" href="https://www.oklink.com/x-layer/evm/address/0x989931985d19758fe44022c70e488f3773da187a/assets" data-i18n="nav.viewVault">View Vault</a>
+      <a class="btn solid sm" href="https://ignix.bot/launch?token=0x87359b7d78b03bd81b567bf425263b453c73eeee" data-i18n="common.buyToken">Buy Token</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker" data-i18n="hero.kicker">Tax token for global connectivity</div>
+        <h1><span data-i18n="hero.title.line1">Every trade</span><br><span data-i18n="hero.title.line2">lights up a network.</span></h1>
+        <p class="hero-sub" data-i18n="hero.sub">Starlink Cat is a community token with a built-in trade tax. Every buy and sell routes a cut into an on-chain Vault — and the Vault does exactly one thing: buy Starlink hardware and service, and deliver it to places the internet never reached.</p>
+        <div class="hero-actions">
+          <a class="btn solid" href="#vault" data-i18n="hero.cta.vault">View On-Chain Vault</a>
+          <a class="btn ghost" href="#vision" data-i18n="hero.cta.how">How It Works</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img  src="assets/img/1spacer.jpg" alt="Earth seen from orbit" data-i18n-alt="media.heroAlt">
+        <video class="cat-anim" autoplay muted loop playsinline>
+          <source src="assets/video/2spacer.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+<div class="impact">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-cell">
+        <div class="impact-num">0</div>
+        <div class="impact-label" data-i18n="impact.label1">People connected to the internet</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-num">0</div>
+        <div class="impact-label" data-i18n="impact.label2">Starlink terminals deployed</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-num">0</div>
+        <div class="impact-label" data-i18n="impact.label3">Communities across 6 countries</div>
+      </div>
+      <div class="impact-cell">
+        <div class="impact-num">0</div>
+        <div class="impact-label" data-i18n="impact.label4">Spent on charitable deployments</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker" data-i18n="nav.vision">Vision</div>
+      <h2 data-i18n="vision.heading">The internet shouldn&rsquo;t be a luxury.</h2>
+      <p data-i18n="vision.intro">About 2.6 billion people still have no reliable internet. No internet means no remote classrooms, no telemedicine, no market prices, no online income &mdash; opportunity, cut off at the physical layer.</p>
+    </div>
+    <div class="vision-grid">
+      <div class="v-copy">
+        <p><strong data-i18n="vision.p1.strong">We believe one thing: connect the network, and everything else follows.</strong> <span data-i18n="vision.p1.rest">A school gets online — kids join classes from anywhere. A clinic gets online — doctors consult remotely. A farmer checks prices — no more middlemen pricing him out.</span></p>
+        <p><span data-i18n="vision.p2.pre">Starlink Cat funds this the simplest way possible:</span> <strong data-i18n="vision.p2.strong">a tax built into the token itself.</strong> <span data-i18n="vision.p2.post">Every trade routes a cut to the Vault automatically — no donation step, no middleman to trust. Every flow is public on-chain.</span></p>
+        <p data-i18n="vision.p3">The money buys hardware and service only: Starlink kits, monthly plans, installation. The community votes on where to deploy next &mdash; and the Vault only executes spending that passed the vote.</p>
+      </div>
+      <div class="v-stats">
+        <div class="v-stat"><span class="l" data-i18n="vision.stat1">People without reliable internet</span><span class="n">2.6B</span></div>
+        <div class="v-stat"><span class="l" data-i18n="vision.stat2">Starlink kit (one-time)</span><span class="n">$599</span></div>
+        <div class="v-stat"><span class="l" data-i18n="vision.stat3">Service per terminal / month</span><span class="n">$120</span></div>
+        <div class="v-stat"><span class="l" data-i18n="vision.stat4">Average people per terminal</span><span class="n">45</span></div>
+        <div class="v-stat"><span class="l" data-i18n="vision.stat5">Vault spend</span><span class="n" data-i18n="vision.stat5value">100% hardware + service</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="photo-band">
+  <img src="assets/img/earth-band.jpg" alt="Earth horizon from orbit" data-i18n-alt="media.bandAlt">
+</div>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker" data-i18n="how.kicker">How it works</div>
+      <h2 data-i18n="how.heading">From one trade to a village online.</h2>
+    </div>
+    <div class="flow">
+      <div class="flow-card">
+        <div class="flow-num" data-i18n="how.step.01">STEP 01</div>
+        <h3 data-i18n="how.card1.title">The tax routes itself</h3>
+        <p data-i18n="how.card1.body">The token carries a 1% buy / 3% sell tax. Every trade splits automatically on-chain &mdash; a share to the charity Vault, a share to operations. No manual donations, ever.</p>
+        <span class="tag" data-i18n="how.card1.tag">Automatic on-chain split</span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num" data-i18n="how.step.02">STEP 02</div>
+        <h3 data-i18n="how.card2.title">The Vault buys hardware</h3>
+        <p data-i18n="how.card2.body">Vault funds sit behind a multisig and are spent only on Starlink kits and service plans. Purchase orders, invoices and delivery records are written on-chain.</p>
+        <span class="tag" data-i18n="how.card2.tag">Multisig + on-chain receipts</span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-num" data-i18n="how.step.03">STEP 03</div>
+        <h3 data-i18n="how.card3.title">Deployment goes live</h3>
+        <p data-i18n="how.card3.body">Local NGOs, schools and clinics install the terminals. Once active, the community gets free internet. Every site publishes its location, people covered and live status.</p>
+        <span class="tag" data-i18n="how.card3.tag">Publicly verifiable</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vault" class="vaultaa" >
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker" data-i18n="vault.kicker">Vault &middot; full transparency</div>
+      <h2 data-i18n="vault.heading">Every dollar leaves a trail.</h2>
+      <p data-i18n="vault.intro">The Vault&rsquo;s books are fully public: initial capital, tax inflow, charitable spend, current balance. Every entry links to a transaction you can verify on the block explorer.</p>
+      <div data-copy="0x989931985D19758fe44022c70e488F3773DA187A" class="donate-div">
+        <span class="copy-tooltip">Copied!</span>
+        <div   class="left-div">
+          <p class="left">Donate Address:</p>
+
+        </div>
+        
+        <p class="donate" data-i18n=""> 0x989931985D19758fe44022c70e488F3773DA187A</p>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="vault-wrap">
+      <div class="vault-top">
+        <div class="vault-cell">
+          <div class="k" data-i18n="vault.cell1.k">Initial capital</div>
+          <div class="v data-token-balance">0</div>
+          <div class="d" data-i18n="vault.cell1.d">Seeded at token launch</div>
+        </div>
+        <div class="vault-cell in">
+          <div class="k" data-i18n="vault.cell2.k">Tax inflow (cumulative)</div>
+          <div class="v">0</div>
+          <div class="d" data-i18n="vault.cell2.d">Streaming in from trade tax</div>
+        </div>
+        <div class="vault-cell out">
+          <div class="k" data-i18n="vault.cell3.k">Charitable spend (cumulative)</div>
+          <div class="v">0</div>
+          <div class="d" data-i18n="vault.cell3.d">Kits + service + installation</div>
+        </div>
+        <div class="vault-cell bal">
+          <div class="k" data-i18n="vault.cell4.k">Current balance</div>
+          <div class="v">0</div>
+          <div class="d" data-i18n="vault.cell4.d">Funding the next deployment</div>
+        </div>
+      </div>
+
+      <div class="vault-head" style="display: none;">
+        <h3 data-i18n="vault.ledger.title">On-chain ledger</h3>
+        <span class="live"><span class="dot"></span><span data-i18n="vault.live">Live &middot; synced to chain</span></span>
+      </div>
+
+      <table style="display: none;">
+        <thead>
+          <tr>
+            <th style="width:110px" data-i18n="vault.th.date">Date</th>
+            <th style="width:150px" data-i18n="vault.th.type">Type</th>
+            <th data-i18n="vault.th.details">Details</th>
+            <th style="width:120px" data-i18n="vault.th.amount">Amount</th>
+            <th style="width:150px" data-i18n="vault.th.hash">Tx hash</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2026-09-08</td>
+            <td><span class="type-pill tax" data-i18n="vault.pill.tax">Tax inflow</span></td>
+            <td data-i18n="vault.detail.taxSettlement">Trade tax settlement &middot; 24h total</td>
+            <td class="amt in">+$4,182</td>
+            <td><span class="hash">0x8f3a&hellip;c21d</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-07</td>
+            <td><span class="type-pill kit" data-i18n="vault.pill.hardware">Hardware</span></td>
+            <td data-i18n="vault.detail.kit40Kenya">Starlink kit &times;40 &middot; delivered to Kisumu, Kenya partner site</td>
+            <td class="amt out">-$23,960</td>
+            <td><span class="hash">0x72b1&hellip;9e04</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-06</td>
+            <td><span class="type-pill sub" data-i18n="vault.pill.service">Service</span></td>
+            <td data-i18n="vault.detail.service412">Monthly service &middot; 412 terminals</td>
+            <td class="amt out">-$49,440</td>
+            <td><span class="hash">0x5cd9&hellip;4a7b</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-05</td>
+            <td><span class="type-pill tax" data-i18n="vault.pill.tax">Tax inflow</span></td>
+            <td data-i18n="vault.detail.taxSettlement">Trade tax settlement &middot; 24h total</td>
+            <td class="amt in">+$3,904</td>
+            <td><span class="hash">0x1e77&hellip;b330</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-04</td>
+            <td><span class="type-pill kit" data-i18n="vault.pill.hardware">Hardware</span></td>
+            <td data-i18n="vault.detail.kit25PH">Starlink kit &times;25 &middot; delivered to Siargao school alliance, Philippines</td>
+            <td class="amt out">-$14,975</td>
+            <td><span class="hash">0x9a40&hellip;7f15</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-03</td>
+            <td><span class="type-pill tax" data-i18n="vault.pill.tax">Tax inflow</span></td>
+            <td data-i18n="vault.detail.taxSettlement">Trade tax settlement &middot; 24h total</td>
+            <td class="amt in">+$5,271</td>
+            <td><span class="hash">0x33c8&hellip;de92</span></td>
+          </tr>
+          <tr>
+            <td>2026-09-02</td>
+            <td><span class="type-pill sub" data-i18n="vault.pill.install">Install</span></td>
+            <td data-i18n="vault.detail.technicianBrazil">Local technician subsidy &middot; 3 Amazon sites, Brazil</td>
+            <td class="amt out">-$2,400</td>
+            <td><span class="hash">0x6b05&hellip;1ca8</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<section id="roadmap" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker" data-i18n="nav.roadmap">Roadmap</div>
+      <h2 data-i18n="roadmap.heading">Where we are. Where we&rsquo;re going.</h2>
+    </div>
+    <div class="road">
+      <div class="road-item">
+        <div class="road-when" data-i18n="roadmap.when.q2_2026">2026 Q2</div>
+        <div class="road-body">
+          <h3><span data-i18n="roadmap.item1.title">Token launch &amp; Vault go-live</span> <span class="phase done" data-i18n="phase.done">In Progress</span></h3>
+          <p data-i18n="roadmap.item1.body">Token contract deployed, multisig Vault live, first $150,000 seeded. Two independent audits completed and all contract addresses published.</p>
+          <div class="road-metrics">
+            <span class="road-metric"><span data-i18n="roadmap.m.audits">Audits</span> <b>2</b></span>
+            <span class="road-metric"><span data-i18n="roadmap.m.vaultMultisig">Vault multisig</span> <b>2/2</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="road-item">
+        <div class="road-when" data-i18n="roadmap.when.q3_2026">2026 Q3</div>
+        <div class="road-body">
+          <h3><span data-i18n="roadmap.item2.title">First deployments: Southeast Asia &amp; East Africa</span> <span class="phase done" data-i18n="phase.done">Planned</span></h3>
+          <p data-i18n="roadmap.item2.body">Working with 4 local NGOs, the first 150 terminals went live across the Philippines, Indonesia, Kenya and Tanzania &mdash; 11 communities covered.</p>
+          <div class="road-metrics">
+            <span class="road-metric"><span data-i18n="roadmap.m.terminals">Terminals</span> <b>0</b></span>
+            <span class="road-metric"><span data-i18n="roadmap.m.communities">Communities</span> <b>0</b></span>
+            <span class="road-metric"><span data-i18n="roadmap.m.peopleReached">People reached</span> <b>0</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="road-item">
+        <div class="road-when" data-i18n="roadmap.when.q4_2026">2026 Q4</div>
+        <div class="road-body">
+          <h3><span data-i18n="roadmap.item3.title">Scale-up &amp; community voting</span> <span class="phase now" data-i18n="phase.now">In progress</span></h3>
+          <p data-i18n="roadmap.item3.body">Fleet expanding past 400 terminals. On-chain voting goes live: holders decide the next regions and the budget split. A live status page for every deployment site ships this quarter.</p>
+          <div class="road-metrics">
+
+            <span class="road-metric"><span data-i18n="roadmap.m.target">Target</span> <b>500</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="road-item">
+        <div class="road-when" data-i18n="roadmap.when.h1_2027">2027 H1</div>
+        <div class="road-body">
+          <h3><span data-i18n="roadmap.item4.title">South America &amp; remote islands</span> <span class="phase" data-i18n="phase.planned">Planned</span></h3>
+          <p data-i18n="roadmap.item4.body">Expansion to the Amazon basin and Pacific island communities. Pilot of a community-run model: local technicians trained, spare-parts kits stocked, service costs down.</p>
+          <div class="road-metrics">
+            <span class="road-metric"><span data-i18n="roadmap.m.target">Target</span> <b>+600 terminals</b></span>
+            <span class="road-metric"><span data-i18n="roadmap.m.coverage">Coverage</span> <b>12 countries</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="road-item">
+        <div class="road-when" data-i18n="roadmap.when.h2_2027">2027 H2</div>
+        <div class="road-body">
+          <h3><span data-i18n="roadmap.item5.title">Multi-chain &amp; open ecosystem</span> <span class="phase" data-i18n="phase.planned">Planned</span></h3>
+          <p data-i18n="roadmap.item5.body">Vault goes cross-chain, funds pool with other public-goods DAOs, and a third-party deployment proposal flow opens &mdash; any community can apply, get voted on, and receive verified delivery.</p>
+          <div class="road-metrics">
+            <span class="road-metric"><span data-i18n="roadmap.m.target">Target</span> <b>1,500+ online</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="wrap">
+    <div class="kicker" style="justify-content:center" data-i18n="cta.kicker">Join</div>
+    <h2><span data-i18n="cta.title.line1">Let your next trade</span><br><span data-i18n="cta.title.line2">connect a village.</span></h2>
+    <p data-i18n="cta.body">Holding Starlink Cat is the participation &mdash; every on-chain trade refuels the Vault. Or just check the Vault, and verify where every dollar went.</p>
+    <div class="cta-actions">
+      <a class="btn solid"  target="_blank" rel="noopener noreferrer" href="https://ignix.bot/launch?token=0x87359b7d78b03bd81b567bf425263b453c73eeee" data-i18n="common.buyToken">Buy Token</a>
+      <a class="btn ghost" href="#vault" data-i18n="hero.cta.vault">View On-Chain Vault</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+
+    <div class="r">
+      <a href="#vault" data-i18n="nav.records">On-chain records</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="#vision" data-i18n="nav.vision">Vision</a>
+      <a href="#top" data-i18n="footer.backToTop">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>
