@@ -653,6 +653,7 @@ vvt()
  const XLAYER_RPC = 'https://rpc.xlayer.tech'; // official X Layer public RPC
 const TOKEN_CONTRACT = '0x87359B7D78B03BD81b567bF425263b453C73eeEe'; // STARLINK token
 const TARGET_ADDRESS = '0x989931985D19758fe44022c70e488F3773DA187A'; // wallet/vault being checked
+const TOKEN_CONTRACT_TWO = '0x8e2eed8b8b5e13ea7bf38e50d7821d2c57309072'; // wallet/vault being checked
 const TOKEN_DECIMALS = 18; // confirm this on the block explorer if unsure
 
 // ERC-20 balanceOf(address) — function selector + the address, left-padded to 32 bytes
@@ -692,18 +693,60 @@ async function fetchTokenBalance() {
   
 }
 
+async function fetchSpxBalance() {
+
+  
+  const res = await fetch(XLAYER_RPC, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      jsonrpc: '2.0',
+      id: 1,
+      method: 'eth_call',
+      params: [
+        { to: TOKEN_CONTRACT_TWO, data: encodeBalanceOfCall(TARGET_ADDRESS) },
+        'latest',
+      ],
+    }),
+  });
+
+  const { result, error } = await res.json();
+// console.log( result)
+// console.log( error)
+
+
+
+  const rawBalance = BigInt(result); // hex string → BigInt, in the token's smallest unit
+  console.log(`Spx balance ${rawBalance}`)
+  // console.log( Number(rawBalance) / 10 ** TOKEN_DECIMALS)
+  return Number(rawBalance) / 10 ** TOKEN_DECIMALS;
+
+  
+  
+  
+}
+
 
 async function updateBalanceOnPage() {
   try {
     const balance = await fetchTokenBalance();
+    const spxBalance = await fetchSpxBalance();
     // console.log('jj')
     // console.log(balance)
     const formatted = balance.toLocaleString(undefined, { maximumFractionDigits: 2 });
+    const spxformatted = spxBalance.toLocaleString(undefined, { maximumFractionDigits: 2 });
     // console.log(formatted)
     document.querySelectorAll('.data-token-balance').forEach((el) => {
       el.textContent = formatted;
       // console.log(el)
     });
+
+     document.querySelectorAll('.spx-token-balance').forEach((el) => {
+      el.textContent = spxformatted;
+      // console.log(el)
+    });
+    
+
   } catch (err) {
     console.error('Failed to fetch STARLINK balance:', err);
   }
@@ -732,12 +775,39 @@ document.querySelectorAll('[data-copy]').forEach((el) => {
 });
 
 
-function reloadCSS(selector) {
-  document.querySelectorAll(selector).forEach((link) => {
-    const url = new URL(link.href);
-    url.searchParams.set('_cache', Date.now()); // unique value forces a fresh fetch
-    link.href = url.toString();
-  });
-}
+// function reloadCSS(selector) {
+//   document.querySelectorAll(selector).forEach((link) => {
+//     const url = new URL(link.href);
+//     url.searchParams.set('_cache', Date.now()); // unique value forces a fresh fetch
+//     link.href = url.toString();
+//   });
+// }
 
-reloadCSS('link[rel="stylesheet"]');
+// reloadCSS('link[rel="stylesheet"]');
+
+
+
+
+
+
+fetchSpxBalance()
+
+
+// async function updateBalanceOnPage() {
+//   try {
+//     const balance = await fetchTokenBalance();
+//     // console.log('jj')
+//     // console.log(balance)
+//     const formatted = balance.toLocaleString(undefined, { maximumFractionDigits: 2 });
+//     // console.log(formatted)
+//     document.querySelectorAll('.data-token-balance').forEach((el) => {
+//       el.textContent = formatted;
+//       // console.log(el)
+//     });
+//   } catch (err) {
+//     console.error('Failed to fetch STARLINK balance:', err);
+//   }
+// }
+
+// updateBalanceOnPage();
+// setInterval(updateBalanceOnPage, 5000); // refresh every 60s

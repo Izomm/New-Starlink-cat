@@ -311,9 +311,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index
   justify-content: center;
    width:100%;
   align-items: center;
-
   
-
 }
 .copy-tooltip {
 
@@ -323,11 +321,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index
 .buyb{
   font-size: 0.1rem;
 }
+.vault-top{display:grid;grid-template-columns:1fr;}
 
 }
 
 
+.vault-cell{padding:28px 26px;border-bottom:1px solid var(--line)}
 
+.vault-cell:nth-child(4){border: none;}
 
 /* .vaultaa{
   display: none;
