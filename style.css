@@ -339,17 +339,22 @@ footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10px;
+  align-items: center;
+
   position: relative;
+
 }
 
 .donate-div p{
   opacity: 1;
   color: white;
-  font-weight: 600;
+  
   margin: 0;
   display: flex;
   justify-content: left;
+    font: var(--font);
+    font-weight: 500;
+    opacity: .8;
   
 
 }
